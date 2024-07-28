@@ -4,7 +4,6 @@
  */
 package proyecto;
 import javax.swing.JOptionPane;
-import java.util.Date;
 /**
  *
  * @author David
@@ -12,9 +11,9 @@ import java.util.Date;
 public class Visitante {
     private String nombre;
     private int edad;
-    private Date fechaIngreso;
+    private String fechaIngreso;
 
-    public Visitante(String nombre, int edad, Date fechaIngreso) {
+    public Visitante(String nombre, int edad, String fechaIngreso) {
         this.nombre = nombre;
         this.edad = edad;
         this.fechaIngreso = fechaIngreso;
@@ -28,7 +27,7 @@ public class Visitante {
         return edad;
     }
 
-    public Date getFechaIngreso() {
+    public String getFechaIngreso() {
         return fechaIngreso;
     }
 }

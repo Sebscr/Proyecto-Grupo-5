@@ -85,7 +85,7 @@ public class GestionHabitats {
                 return;
             }
         }
-        System.out.println("Hábitat no encontrado.");
+        System.out.println("Habitat no encontrado.");
     }
 
     

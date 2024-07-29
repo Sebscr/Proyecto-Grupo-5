@@ -57,4 +57,23 @@ public class Proyecto {
             }
         }
     }
+
+        //llamamos a los metodos en la clase main  
+        
+        GestionHabitats gestion = new GestionHabitats(10);
+
+        gestion.consultarHabitats();
+
+        gestion.agregarHabitat("4", "Desierto helado", "Desierto", "25", "Artartinda"); //Ponemos informacion precargada para el nuevo habitat
+
+        gestion.consultarHabitats();
+
+        gestion.modificarHabitat("1", "Selva Amazonica Modificada", "Selva Tropical", "1200", "Brasil"); ////Ponemos informacion precargada para el nuevo habitat
+
+        gestion.consultarHabitats();
+
+        gestion.eliminarHabitat("2");  //Eliminamos 
+
+        gestion.consultarHabitats();
+    }   
 }

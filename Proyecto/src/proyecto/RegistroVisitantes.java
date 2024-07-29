@@ -8,6 +8,6 @@ package proyecto;
  *
  * @author David
  */
-public class arregloVisistantes {
+public class RegistroVisitantes {
     
 }

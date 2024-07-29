@@ -164,5 +164,17 @@ public class Proyecto {
             }
         }
     }*/
+      int RegistroAlimentacion= Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese la cantidad de registros que desea crear: "));
+        Alimentacion[] arrAlimentacion = new Alimentacion[RegistroAlimentacion];
+        for (int i=0; i < RegistroAlimentacion; i++){  
+            int horario = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la hora de alimentacion de los animales para el registro " + (i + 1) + ": "));
+            String alimentos = JOptionPane.showInputDialog(null, "Ingrese los alimentos que consumen los animales para el registro " + (i + 1) + ": ");
+            String frecuenciaAlimentacion = JOptionPane.showInputDialog(null, "Ingrese la frecuencia de alimentación en horas de los animales para el registro " + (i + 1) + ": ");
+            double cantidadAlimento = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese la cantidad de alimento en kg para el registro " + (i + 1) + ": "));
+            arrAlimentacion [i]= new Alimentacion(horario,alimentos,frecuenciaAlimentacion,cantidadAlimento);
+        }
+        for (int i=0; i< RegistroAlimentacion; i++){
+            JOptionPane.showMessageDialog(null,"La hora de alimentacion es a las: "+arrAlimentacion[i].getHorario()+" Este animal consume: "+arrAlimentacion[i].getAlimentos()+" Este animal come cada: "+arrAlimentacion[i].getFrecuenciaalimentacion()+" horas"+" Este animal come (kilos): "+arrAlimentacion[i].getCantidadalimento());
+        }
         
     }

@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  */
 public class Visitante {
     // Atributos privados para almacenar la información de cada visitante
-  private String nombre;
+    private String nombre;
     private int edad;
     private String fechaIngreso;
     

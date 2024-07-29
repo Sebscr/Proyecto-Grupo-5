@@ -76,3 +76,91 @@ public class Proyecto {
 
         gestion.consultarHabitats();  
 
+/*
+while (true) {
+            String[] opciones = {"Agregar Evento", "Ver Eventos", "Modificar Evento", "Eliminar Evento", "Volver"};
+            int eleccion = JOptionPane.showOptionDialog(
+                    null,
+                    "Seleccione una opción",
+                    "Gestión de Eventos",
+                    JOptionPane.DEFAULT_OPTION,
+                    JOptionPane.INFORMATION_MESSAGE,
+                    null,
+                    opciones,
+                    opciones[0]
+            );
+
+            if (eleccion == 4) {
+                break;
+            }
+
+            switch (eleccion) {
+                case 0:
+                    if (numEventos < maxEventos) {
+                        String nombre = JOptionPane.showInputDialog("Ingrese el nombre del evento:");
+                        String fecha = JOptionPane.showInputDialog("Ingrese la fecha del evento (YYYY-MM-DD):");
+                        int id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del evento:"));
+                        String descripcion = JOptionPane.showInputDialog("Ingrese la descripción del evento:");
+                        String localizacion = JOptionPane.showInputDialog("Ingrese la localización del evento:");
+                        eventos[numEventos++] = new Evento(nombre, fecha, id, descripcion, localizacion);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Se ha alcanzado el límite máximo de eventos.");
+                    }
+                    break;
+                case 1:
+                    if (numEventos == 0) {
+                        JOptionPane.showMessageDialog(null, "No hay eventos para mostrar.");
+                    } else {
+                        StringBuilder info = new StringBuilder();
+                        for (int i = 0; i < numEventos; i++) {
+                            info.append(eventos[i].toString()).append("\n");
+                        }
+                        JOptionPane.showMessageDialog(null, info.toString());
+                    }
+                    break;
+                case 2:
+                    int idModificar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del evento a modificar:"));
+                    boolean encontrado = false;
+                    for (int i = 0; i < numEventos; i++) {
+                        if (eventos[i].getId() == idModificar) {
+                            String nuevoNombre = JOptionPane.showInputDialog("Ingrese el nuevo nombre del evento:");
+                            String nuevaFecha = JOptionPane.showInputDialog("Ingrese la nueva fecha del evento (YYYY-MM-DD):");
+                            String nuevaDescripcion = JOptionPane.showInputDialog("Ingrese la nueva descripción del evento:");
+                            String nuevaLocalizacion = JOptionPane.showInputDialog("Ingrese la nueva localización del evento:");
+
+                            eventos[i].setNombre(nuevoNombre);
+                            eventos[i].setFecha(nuevaFecha);
+                            eventos[i].setDescripcion(nuevaDescripcion);
+                            eventos[i].setLocalizacion(nuevaLocalizacion);
+
+                            encontrado = true;
+                            JOptionPane.showMessageDialog(null, "Evento modificado con éxito.");
+                            break;
+                        }
+                    }
+                    if (!encontrado) {
+                        JOptionPane.showMessageDialog(null, "No se encontró ningún evento con ese ID.");
+                    }
+                    break;
+                case 3:
+                    int idEliminar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del evento a eliminar:"));
+                    encontrado = false;
+                    for (int i = 0; i < numEventos; i++) {
+                        if (eventos[i].getId() == idEliminar) {
+                            for (int j = i; j < numEventos - 1; j++) {
+                                eventos[j] = eventos[j + 1];
+                            }
+                            eventos[--numEventos] = null;
+                            encontrado = true;
+                            JOptionPane.showMessageDialog(null, "Evento eliminado con éxito.");
+                            break;
+                        }
+                    }
+                    if (!encontrado) {
+                        JOptionPane.showMessageDialog(null, "No se encontró ningún evento con ese ID.");
+                    }
+                    break;
+            }
+        }*/
+        
+    }

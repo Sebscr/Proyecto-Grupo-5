@@ -77,11 +77,16 @@ public class Proyecto {
         gestion.consultarHabitats();  
 
 /*
-while (true) {
-            String[] opciones = {"Agregar Evento", "Ver Eventos", "Modificar Evento", "Eliminar Evento", "Volver"};
-            int eleccion = JOptionPane.showOptionDialog(
+       private static void gestionarEventos() {
+        Evento[] eventos = new Evento[10];
+        int numEventos = 0;
+        String[] opciones = {"Agregar Evento", "Ver Eventos", "Modificar Evento", "Eliminar Evento", "Volver"};
+        int opcion = -1;
+
+        while (opcion != 4) { // "Volver"
+            opcion = JOptionPane.showOptionDialog(
                     null,
-                    "Seleccione una opción",
+                    "Seleccione una opción:",
                     "Gestión de Eventos",
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.INFORMATION_MESSAGE,
@@ -90,13 +95,9 @@ while (true) {
                     opciones[0]
             );
 
-            if (eleccion == 4) {
-                break;
-            }
-
-            switch (eleccion) {
+            switch (opcion) {
                 case 0:
-                    if (numEventos < maxEventos) {
+                    if (numEventos < eventos.length) {
                         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del evento:");
                         String fecha = JOptionPane.showInputDialog("Ingrese la fecha del evento (YYYY-MM-DD):");
                         int id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del evento:"));
@@ -161,6 +162,7 @@ while (true) {
                     }
                     break;
             }
-        }*/
+        }
+    }*/
         
     }

@@ -11,18 +11,18 @@ import javax.swing.JOptionPane;
  * @author David
  */
 public class RegistroVisitantes {
-    private Visitante[] visitantes;
+    private Visitantes[] visitantes;
     private int contador;
 
     public RegistroVisitantes() {
-        visitantes = new Visitante[10]; // Inicia con un arreglo de tamaño 10
+        visitantes = new Visitantes[10]; // Inicia con un arreglo de tamaño 10
         contador = 0;
         agregarVisitantesPrecargados(); // Agregar visitantes precargados al iniciar
     }
 
     public void agregarVisitante() { // Verificar si hay espacio en el arreglo para un nuevo visitante
         if (contador < visitantes.length) {
-            Visitante visitante = new Visitante();
+            Visitantes visitante = new Visitantes();
             visitante.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del visitante:"));
             visitante.setEdad(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del visitante:")));
             visitante.setFechaIngreso("25/07/2024 10:00:00"); // Fecha fija
@@ -64,10 +64,10 @@ public class RegistroVisitantes {
 
     private void agregarVisitantesPrecargados() {
         // visitantes precargados
-        visitantes[0] = new Visitante("Juan Perez", 12, "25/07/2024 10:00:00");
-        visitantes[1] = new Visitante("Maria Gomez", 25, "25/07/2024 11:00:00");
-        visitantes[2] = new Visitante("Luis Rodriguez", 35, "25/07/2024 12:00:00");
+        visitantes[0] = new Visitantes("Juan Perez", 12, "25/07/2024 10:00:00");
+        visitantes[1] = new Visitantes("Maria Gomez", 25, "25/07/2024 11:00:00");
+        visitantes[2] = new Visitantes("Luis Rodriguez", 35, "25/07/2024 12:00:00");
         contador = 3; 
     }
 }
-}
+

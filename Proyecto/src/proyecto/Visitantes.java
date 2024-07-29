@@ -8,21 +8,21 @@ import javax.swing.JOptionPane;
  *
  * @author David
  */
-public class Visitante {
+public class Visitantes {
     // Atributos privados para almacenar la información de cada visitante
     private String nombre;
     private int edad;
     private String fechaIngreso;
     
      // Constructor de atributos a valores predeterminados
-    public Visitante() {
+    public Visitantes() {
         this.nombre = "";
         this.edad = 0;
         this.fechaIngreso = "";
     }
     
      // Constructor de atributos al crear un objeto Visitante
-    public Visitante(String nombre, int edad, String fechaIngreso) {
+    public Visitantes(String nombre, int edad, String fechaIngreso) {
         this.nombre = nombre;
         this.edad = edad;
         this.fechaIngreso = fechaIngreso;

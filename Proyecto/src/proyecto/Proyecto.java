@@ -72,7 +72,7 @@ public class Proyecto {
 
         gestion.consultarHabitats();
 
-        gestion.eliminarHabitat("2");  //Eliminamos 
+        gestion.eliminarHabitat("2");  //Eliminamos un habitad ya creado 
 
         gestion.consultarHabitats();  
 

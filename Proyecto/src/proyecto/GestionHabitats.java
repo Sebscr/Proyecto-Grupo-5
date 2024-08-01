@@ -62,7 +62,7 @@ public class GestionHabitats {
     // Metodos para comparar los habitats  
     public void modificarHabitat(String id, String nuevoNombre, String nuevoTipo, String nuevaCapacidad, String nuevaUbicacion) {
         for (int i = 0; i < habitats.length; i++) {
-            if (habitats[i][0] != null && habitats[i][0] == id) { // Comparación de IDs sin .equals
+            if (habitats[i][0] != null && habitats[i][0] == id) { 
                 habitats[i][1] = nuevoNombre;
                 habitats[i][2] = nuevoTipo;
                 habitats[i][3] = nuevaCapacidad;

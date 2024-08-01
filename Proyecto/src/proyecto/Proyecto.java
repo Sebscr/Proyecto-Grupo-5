@@ -58,16 +58,40 @@ public class Proyecto {
         }
     }
 
-        //llamamos a los metodos en la clase main  
-        
-        GestionHabitats gestion = new GestionHabitats(10);
-        gestion.consultarHabitats();
-        gestion.agregarHabitat("4", "Desierto helado", "Desierto", "25", "Artartinda"); //Ponemos informacion precargada para el nuevo habitat
-        gestion.consultarHabitats();
-        gestion.modificarHabitat("1", "Selva Amazonica Modificada", "Selva Tropical", "1200", "Brasil"); ////Ponemos informacion precargada para el nuevo habitat
-        gestion.consultarHabitats();
-        gestion.eliminarHabitat("2");  //Eliminamos un habitad ya creado
-        gestion.consultarHabitats();  
+      GestionHabitats gestionHabitats = new GestionHabitats(10);
+
+        while (true) {
+            // Mostraramos el menu para que la persona seleccione 
+            String menu = "Selecciona una opción:\n"
+                    + "1. Agregar hábitat\n"
+                    + "2. Consultar hábitats\n"
+                    + "3. Modificar hábitat\n"
+                    + "4. Eliminar hábitat\n"
+                    + "5. Salir";
+            String opcion = JOptionPane.showInputDialog(menu);  // creamos un nuevo metodo que solicite el menu que hicimos anterior mente 
+
+            switch (opcion) { // Aca lo que hacemos es que depende del numero del cliente se le da el cuadro de texto para digite lo que quiere hacer 
+                case "1":
+                    gestionHabitats.agregarHabitat();   // Llamamos el metodo de agregar habitats 
+                    break;
+                case "2":
+                    gestionHabitats.consultarHabitats(); // Llamamos el metodo de consultar habitats 
+                    break;
+                case "3":
+                    gestionHabitats.modificarHabitat(); // Llamamos el metodo de modificar habitats 
+                    break;
+                case "4":
+                    gestionHabitats.eliminarHabitat(); // Llamamos el metodo de eliminar habitats 
+                    break;
+                case "5":
+                    JOptionPane.showMessageDialog(null, "Saliendo del programa...");
+                    System.exit(0);
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opción no válida. Intenta nuevamente."); // validamos que el numero que digite el usuario si este dentro del 
+                    break;
+            }
+        }  
 
 
       private static void gestionarEventos() {

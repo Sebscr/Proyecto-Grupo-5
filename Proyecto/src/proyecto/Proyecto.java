@@ -58,40 +58,53 @@ public class Proyecto {
         }
     }
 
-      GestionHabitats gestionHabitats = new GestionHabitats(10);
+      public static void main(String[] args) {
+    // Creamos una instancia de la clase GestionHabitats para manejar los hábitats
+    GestionHabitats gestionHabitats = new GestionHabitats();
+    boolean continuar = true; // Variable para controlar el bucle del menú
 
-        while (true) {
-            // Mostraramos el menu para que la persona seleccione 
-            String menu = "Selecciona una opción:\n"
-                    + "1. Agregar hábitat\n"
-                    + "2. Consultar hábitats\n"
-                    + "3. Modificar hábitat\n"
-                    + "4. Eliminar hábitat\n"
-                    + "5. Salir";
-            String opcion = JOptionPane.showInputDialog(menu);  // creamos un nuevo metodo que solicite el menu que hicimos anterior mente 
+    // Bucle que se ejecuta mientras el usuario quiera seguir usando el sistema
+    while (continuar) {
+        // Mostramos un menú al usuario y le pedimos que seleccione una opción
+        String opcion = JOptionPane.showInputDialog(
+            "Seleccione una opción:\n" +
+            "1. Agregar Hábitat\n" +
+            "2. Consultar Hábitats\n" +
+            "3. Modificar Hábitat\n" +
+            "4. Eliminar Hábitat\n" +
+            "5. Salir"
+        );
 
-            switch (opcion) { // Aca lo que hacemos es que depende del numero del cliente se le da el cuadro de texto para digite lo que quiere hacer 
-                case "1":
-                    gestionHabitats.agregarHabitat();   // Llamamos el metodo de agregar habitats 
-                    break;
-                case "2":
-                    gestionHabitats.consultarHabitats(); // Llamamos el metodo de consultar habitats 
-                    break;
-                case "3":
-                    gestionHabitats.modificarHabitat(); // Llamamos el metodo de modificar habitats 
-                    break;
-                case "4":
-                    gestionHabitats.eliminarHabitat(); // Llamamos el metodo de eliminar habitats 
-                    break;
-                case "5":
-                    JOptionPane.showMessageDialog(null, "Saliendo del programa...");
-                    System.exit(0);
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Opción no válida. Intenta nuevamente."); // validamos que el numero que digite el usuario si este dentro del 
-                    break;
-            }
-        }  
+        // Usamos un switch para manejar la opción seleccionada por el usuario
+        switch (opcion) {
+            case "1":
+                // Si el usuario selecciona "1", llamamos al método para agregar un nuevo hábitat
+                gestionHabitats.agregarHabitat();
+                break;
+            case "2":
+                // Si el usuario selecciona "2", llamamos al método para consultar todos los hábitats
+                gestionHabitats.consultarHabitats();
+                break;
+            case "3":
+                // Si el usuario selecciona "3", llamamos al método para modificar un hábitat existente
+                gestionHabitats.modificarHabitat();
+                break;
+            case "4":
+                // Si el usuario selecciona "4", llamamos al método para eliminar un hábitat
+                gestionHabitats.eliminarHabitat();
+                break;
+            case "5":
+                // Si el usuario selecciona "5", salimos del bucle y terminamos el programa
+                continuar = false;
+                break;
+            default:
+                // Si la opción ingresada no es válida, mostramos un mensaje de error
+                JOptionPane.showMessageDialog(null, "Opción no válida. Intente de nuevo.");
+        }
+    }
+    // Cuando el bucle termina, mostramos un mensaje de despedida
+    JOptionPane.showMessageDialog(null, "Gracias por usar el sistema de gestión de hábitats.");
+}
 
 
       private static void gestionarEventos() {

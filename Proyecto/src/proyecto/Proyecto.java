@@ -77,7 +77,7 @@ public class Proyecto {
         gestion.consultarHabitats();  
 
 
-       private static void gestionarEventos() {
+     /*  private static void gestionarEventos() {
         Evento[] eventos = new Evento[10];
         int numEventos = 0;
         String[] opciones = {"Agregar Evento", "Ver Eventos", "Modificar Evento", "Eliminar Evento", "Volver"};
@@ -163,7 +163,7 @@ public class Proyecto {
                     break;
             }
         }
-    }
+    }*/
       int RegistroAlimentacion= Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese la cantidad de registros que desea crear: "));
         Alimentacion[] arrAlimentacion = new Alimentacion[RegistroAlimentacion];
         for (int i=0; i < RegistroAlimentacion; i++){  

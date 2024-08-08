@@ -2,6 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
+import proyecto.Alimentacion;
+import proyecto.RegistroVisitantes;
+import proyecto.Evento;
 import javax.swing.JOptionPane;
 /**
  *
@@ -136,17 +139,15 @@ public class Proyecto {
                         JOptionPane.showMessageDialog(null, "Se ha alcanzado el limite maximo de eventos.");
                     }
                     break;
-                case 1:
+              /*  case 1:
                     if (numEventos == 0) {
                         JOptionPane.showMessageDialog(null, "No hay eventos para mostrar.");
-                    } else {
-                        StringBuilder info = new StringBuilder();
-                        for (int i = 0; i < numEventos; i++) {
-                            info.append(eventos[i].toString()).append("\n");
+                 //falta por completar 
                         }
                         JOptionPane.showMessageDialog(null, info.toString());
                     }
                     break;
+                    */
                 case 2:
                     int idModificar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del evento a modificar:"));
                     boolean encontrado = false;
@@ -202,7 +203,10 @@ public class Proyecto {
             arrAlimentacion [i]= new Alimentacion(horario,alimentos,frecuenciaAlimentacion,cantidadAlimento);
         }
         for (int i=0; i< RegistroAlimentacion; i++){
-            JOptionPane.showMessageDialog(null,"La hora de alimentacion es a las: "+arrAlimentacion[i].getHorario()+" Este animal consume: "+arrAlimentacion[i].getAlimentos()+" Este animal come cada: "+arrAlimentacion[i].getFrecuenciaalimentacion()+" horas"+" Este animal come (kilos): "+arrAlimentacion[i].getCantidadalimento());
+            JOptionPane.showMessageDialog(null,"La hora de alimentacion es a las: "+arrAlimentacion[i].getHorario()+
+                    " Este animal consume: "+arrAlimentacion[i].getAlimentos()+
+                    " Este animal come cada: "+arrAlimentacion[i].getFrecuenciaalimentacion()+
+                    " horas"+" Este animal come (kilos): "+arrAlimentacion[i].getCantidadalimento());
         }
         
     }

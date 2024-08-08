@@ -1,4 +1,7 @@
-public class GestionHabitats {
+package proyecto;
+
+import javax.swing.JOptionPane;
+public class RegistroVisitantes {
     public String[][] habitats; 
     public int contador; // Numero de habitats actuales en la lista
 

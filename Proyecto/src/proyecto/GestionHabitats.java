@@ -1,4 +1,4 @@
-package pruebaproyectos;
+package GestionHabitats;
 
 import javax.swing.JOptionPane;
 

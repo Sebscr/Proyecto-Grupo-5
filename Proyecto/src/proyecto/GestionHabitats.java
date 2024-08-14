@@ -38,7 +38,7 @@ public class GestionHabitats {
     public void consultarHabitats() {
         String resultado = ""; // Variable para almacenar los detalles de todos los habitats
         for (int i = 0; i < contador; i++) {
-            // Añadimos la informacion de cada habitat a la variable resultado
+            // Anadimos la informacion de cada habitat a la variable resultado
             resultado += "ID: " + habitats[i][0] +
                          ", Nombre: " + habitats[i][1] +
                          ", Tipo: " + habitats[i][2] +

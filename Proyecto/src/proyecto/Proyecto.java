@@ -1,3 +1,4 @@
+package proyecto;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -192,7 +193,7 @@ public class Proyecto {
                     break;
             }
         }
-    }*/
+    }
       int RegistroAlimentacion= Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese la cantidad de registros que desea crear: "));
         Alimentacion[] arrAlimentacion = new Alimentacion[RegistroAlimentacion];
         for (int i=0; i < RegistroAlimentacion; i++){  
@@ -210,3 +211,4 @@ public class Proyecto {
         }
         
     }
+
